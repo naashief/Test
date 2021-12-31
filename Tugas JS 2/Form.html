@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <script>
+            let nPelanggan = document.getElementById("nPelanggan").value;
+            let mail = document.getElementById("mail").value;
+            let time = document.getElementById("time").value;
+            let tKeberangkatan = document.getElementById("tKeberangkatan").value;
+            let jTiket = document.getElementById("jTiket").value;
+
+        function enter() {
+            if(nPelanggan > 30){
+                document.write("Masukan nama kurang dari 30 karakter")
+            }
+            if (jTiket > 10){
+                document.write("Tiket tidak boleh lebih dari 10")
+            }
+        }
+        function submit(){
+            if(enter() == true){
+                document.write ("Nama Pelanggan : " + nPelanggan)
+                document.write ("email : " + mail)
+                document.write ("Time : " + time)
+                document.write ("Tiket Tujuan :" + tKeberangkatan)
+                document.write ("Jumlah Tiket" + jTiket)
+            }else{
+                document.write ("Silahkan coba ulang")
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <form>
+            <label for="nPelanggan"> Nama Pelanggan</label><br>
+            <input id="nPelanggan" type="text" value="text"><br>
+            <br>
+            <label for="mail">Email</label><br>
+            <input id="mail" type="email" value="email"><br>
+            <br>
+            <label for="time"></label>Time<br>
+            <input id = "time" type="time" value="time"><br>
+            <br>
+            <label for="tKeberangkatan">Tujuan Keberangkatan</label><br>
+            <input type="text" id="tKeberangkatan" value="berangkat"><br>
+            <br>
+            <label for="jTiket">Jumlah Tiket</label><br>
+            <input type="number"  id="jTiket" value="tiket">
+        </form>
+        <br>
+        <input type="button" value="Submit" onchange="submit()">
+    </div>
+</body>
+</html>

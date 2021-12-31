@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+    <script>
+        function pilih(){
+            let listAgent = document.getElementById ("select");
+            let select = listAgent.selectedIndex;
+            console.log("agent : " + "is " + listAgent[select].value);
+            let picture = document.getElementById("gambar");
+            picture.src = listAgent[select].value + ".png";
+
+            if(listAgent[select].value == "Reyna"){
+                window.alert("This is Reyna as a Duellist")
+            }
+            if(listAgent[select].value == "Jett"){
+                window.alert("This is Jett as a Duellist")
+            }
+            if(listAgent[select].value == "Chamber"){
+                window.alert("This is Chamber as a Sentinel")
+            }
+            if(listAgent[select].value == "Omen"){
+                window.alert("This is Omen as a Controller")
+            }
+            if(listAgent[select].value == "Yoru"){
+                window.alert("This is Yoru as a Duellist")
+            }
+            if(listAgent[select].value == "Sage"){
+                window.alert("This is Sage as a Sentinel")
+            }
+        }
+    </script>
+</head>
+<body>
+    <form id="fm1" style="font-family: Arial, Helvetica, sans-serif; font-size: 30px;">
+       <b>Select Your Agent</b> <br><select id="select" onchange="pilih()">
+        <option id="rey" value="Reyna">Reyna</option>
+        <option id="jett" value="Jett">Jett</option>
+        <option id="chamb" value="Chamber">Chamber</option>
+        <option id="ome" value="Omen">Omen</option>
+        <option id="yoru" value="Yoru">Yoru</option>
+        <option id="sage" value="Sage">Sage</option>
+        </select>
+    </form>
+    <br>
+    <img src="Reyna.png" alt="agent picture" id="gambar">
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengitung kurs rupiah</title>
+    <style>
+        /* body {
+            background-color: coral;
+        } */
+        .table{
+            border-style: solid;
+        }
+        table,tr,th{
+            border-style: solid;
+        }
+    </style>
+    <script>
+            function hitung(){ 
+                console.log("tes")
+
+            var jumlah = document.getElementById("uang").value;
+            var select = document.getElementById("select").value;
+            var hasil = document.getElementById("hasil").value;
+
+            if(select == "Dollar US"){
+                document.getElementById("hasil").value = jumlah*9915
+            }
+            if(select == "Dollar Singapore"){
+                document.getElementById("hasil").value = jumlah*13472
+            }
+            if(select == "Ringgit Malay"){
+                document.getElementById("hasil").value = jumlah*874
+            }
+            if(select == "Yen Jappan"){
+                document.getElementById("hasil").value = jumlah*120
+            }
+            if(select == "Euro"){
+                document.getElementById("hasil").value = jumlah*15888
+            }
+            if(select == "Riyal"){
+                document.getElementById("hasil").value = jumlah*3592
+            }
+        }
+    </script>
+</head>
+<body>
+     <div class="table">
+         <h1>Menghitung Nilai kurs</h1>
+         <table>
+             <tr>
+                 <th>Masukan Nilai</th>
+                 <th>Valas</th>
+                 <th>Nilai Rupiah</th>
+             </tr>
+             <tr>
+                 <td><input id="uang" type="number"  ></td>
+                 <td><select id= "select" onclick="hitung()">
+                     <option id="us" value="Dollar US"> Dollar US</option>
+                     <option id="sg" value="Dollar Singapore"> Dollar Singapore</option>
+                     <option id="rm" value="Ringgit Malay"> Ringgit Malay</option>
+                     <option id="yen" value="Yen Jappan"> Yen Jappan</option>
+                     <option id="eur" value="Euro"> Euro</option>
+                     <option id="rl" value="Riyal"> Riyal Saudi Arabia</option>
+                 </select></td>
+                 <td><input type="" id="hasil" ></td>
+             </tr>
+         </table>
+     </div>
+        
+</body>
+</html>
